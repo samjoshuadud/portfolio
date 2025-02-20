@@ -10,7 +10,7 @@ export default function Landing() {
             alt="Profile"
             width={220}
             height={220}
-            className="rounded-full mt-16"
+            className="rounded-full mt-16 fadeinDown"
           />
 
           <div className="mt-8 text-[#C3E5D2] text-center">
@@ -24,12 +24,12 @@ export default function Landing() {
             <button className="border border-[#2EA566] w-40 h-14 rounded-lg ml-4">View My Work</button>
           </div>
 
-          <div className="flex flex-row">
-             <a href="https://github.com/samjoshuadud/">
-              <Github color="white" size={37} />
+          <div className="flex flex-row mt-28 gap-8">
+             <a href="https://github.com/samjoshuadud/" target="_blank">
+              <Github color="white" size={30} />
              </a>
-            <a href="https://Linked">
-              <Linkedin color="white" size={37} />
+            <a href="https://www.linkedin.com/in/clbjsh/" target="_blank">
+              <Linkedin color="white" size={30} />
             </a>
           </div>
         </div>
