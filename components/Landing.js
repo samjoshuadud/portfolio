@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {Github, Linkedin} from "lucide-react"
-export default function Landing() {
-
+export default function Landing({setSection}) {
 
   return (
     <>
@@ -28,13 +27,13 @@ export default function Landing() {
           </div>
           
           <div className="mt-12 animate-slideUp [animation-delay:400ms] opacity-0 space-x-6">
-            <button className="bg-[#2EA566] rounded-lg w-52 h-14 relative overflow-hidden group">
+            <button onClick={() => setSection("about")} className="bg-[#2EA566] rounded-lg w-52 h-14 relative overflow-hidden group">
               <span className="absolute inset-0 bg-[#C3E5D2] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               <span className="relative group-hover:text-[#0D2818] transition-colors duration-300">
                 Learn More About Me
               </span>
             </button>
-            <button className="border border-[#2EA566] w-40 h-14 rounded-lg relative overflow-hidden group">
+            <button onClick={() => setSection("projects")} className="border border-[#2EA566] w-40 h-14 rounded-lg relative overflow-hidden group">
               <span className="absolute inset-0 bg-[#2EA566] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               <span className="relative group-hover:text-white transition-colors duration-300">
                 View My Work
