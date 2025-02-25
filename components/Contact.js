@@ -36,7 +36,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-14rem)]">
+    <div className="flex justify-center items-center h-[calc(100vh-10.5rem)]">
       <div className="w-full max-w-2xl px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -78,7 +78,7 @@ export default function Contact() {
         </div>
 
         <motion.p
-          className="text-[#C3E5D2]/60 mt-12 text-center"
+          className="text-[#C3E5D2]/60 my-4 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
