@@ -1,6 +1,6 @@
 "use client";
 
-import { SquareArrowOutUpRight, ChevronUp, ChevronDown } from "lucide-react";
+import { SquareArrowOutUpRight, ChevronUp, ChevronDown, Circle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -25,6 +25,49 @@ export const ProjectDetails = [
     link: "https://github.com/samjoshuadud/uni-lost-full-stack",
     images: ["unilostandfound-1.jpeg", "unilostandfound-2.jpeg"],
   },
+  {
+    title: "Face Attendance System",
+    description: "A simple face attendance system using OpenCV and Python.",
+    techStack: ["OpenCV", "Python", "Tailwind CSS"],
+    summary: `Captures a person's face and compares it with the provided dataset. Once a match is found, it automatically marks the attendance of the matched face.`,
+    link: "https://github.com/samjoshuadud/attendance-opencv",
+    images: ["face-sys1.jpeg"],
+  },
+  {
+    title: "Clinic Portal",
+    description: "CCIS Hackathon Prototype",
+    techStack: ["Vite.js", "Node.js", "MySQL"],
+    summary: `Clinic Portal is a centralized system designed to manage electronic medical records (EMR) for faculty members. A prototype project for our 6th CCIS Hackathon.`,
+    link: "https://github.com/samjoshuadud/clinic-portal",
+    images: ["clinic-portal1.jpeg", "clinic-portal2.jpeg"],
+  },
+  {
+    title: "Build Up",
+    description: "Web3PH Hackathon Prototype",
+    techStack: ["Vite.js", "Python", "RestAPI"],
+    summary: `A prototype project for the Unitour Web3PH Hackathon, Build Up is a web application that helps students review by generating flashcards and quizzes based on their provided materials. Integrated with the Google Books API, it makes finding resources easy. An on going project.`,
+    link: "https://github.com/samjoshuadud/Build-Up",
+    images: ["build-up1.jpeg", "build-up2.jpeg"],
+  },
+  {
+    title: "Java Library System",
+    description: "1st Year Final Project",
+    techStack: ["Java", "MySQL"],
+    summary: `A Library Management System built using Java with a graphical user interface (GUI). This system allows for efficient management of library resources, enabling users to borrow, return, and search for books.`,
+    link: "https://github.com/samjoshuadud/Library-System",
+    images: ["java2.jpeg", "java1.jpeg"],
+  },
+  {
+    title: "Jedgees E-Commerce Website",
+    description: "Printing Service E-Commerce",
+    techStack: ["HTML", "CSS", "JavaScript","PHP", "MySQL"],
+    summary: `A PHP E-Commerce website that enable users to create an order, shop, and request for a service. It is a printing service company.`,
+    link: "https://github.com/samjoshuadud/Jedgeesmain",
+    images: ["jedgeez.jpeg", "jedgeez2.jpeg"],
+  }
+
+
+  
 ];
 
 const ITEMS_PER_PAGE = 1;
@@ -147,6 +190,9 @@ export default function Project() {
           disabled={currentPage === totalPages - 1}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className={`${
+            currentPage === totalPages - 1 ? "opacity-50 cursor-not-allowed" : ""
+          } outline-none focus:outline-none`}
         >
           <ChevronUp size={35} />
         </motion.button>
@@ -156,9 +202,31 @@ export default function Project() {
           disabled={currentPage === 0}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className={`${
+            currentPage === 0 ? "opacity-50 cursor-not-allowed" : ""
+          } outline-none focus:outline-none`}
         >
           <ChevronDown size={35} />
         </motion.button>
+      </div>
+
+      <div className="fixed bottom-40 left-1/2 transform -translate-x-1/2 flex justify-center text-[#C3E5D2]">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => setCurrentPage(index)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className={`mx-1 p-1 outline-none focus:outline-none cursor-pointer`}
+          >
+            <Circle
+              size={10}
+              className={`${
+                index === currentPage ? "text-[#2EA566]" : "text-[#C3E5D2]/50 hover:text-[#C3E5D2]"
+              } transition-colors duration-200`}
+            />
+          </motion.button>
+        ))}
       </div>
     </>
   );
