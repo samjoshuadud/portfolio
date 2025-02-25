@@ -215,7 +215,7 @@ export default function Project() {
       </div>
 
       {/* Page Indicators - Adjusted for better stability */}
-      <div className="w-full pb-8 flex justify-center mt-4  mb-28 lg:mb-44">
+      <div className="w-full  flex justify-center my-auto ">
         <div className="flex items-center gap-2">
           {Array.from({ length: totalPages }).map((_, index) => (
             <motion.button
