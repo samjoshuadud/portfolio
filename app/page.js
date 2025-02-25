@@ -97,7 +97,7 @@ const Navigation = ({setSection, currentSection, isMobile = false}) => {
 
   // Desktop Footer
   return (
-    <div className="fixed bottom-0 w-full h-20 border-t border-[#2EA566]/20 flex items-center justify-center gap-8">
+    <div className="w-full h-16 border-t border-[#2EA566]/20 flex items-center justify-center gap-12 mt-auto">
       {navItems.map(({id, Icon}) => (
         <button 
           key={id}
@@ -139,15 +139,15 @@ export default function Home() {
   const [section, setSection] = useState("landing");
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <h1 className="font-bold text-3xl text-[#C3E5D2] p-6">My Portfolio</h1>
       {renderSection(section, setSection)}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block mt-auto">
         <Navigation setSection={setSection} currentSection={section} />
       </div>
       <div className="lg:hidden">
         <Navigation setSection={setSection} currentSection={section} isMobile={true} />
       </div>
-    </>
+    </div>
   );
 }

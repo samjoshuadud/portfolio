@@ -42,7 +42,7 @@ export default function Landing({setSection}) {
           </div>
 
           
-          <div className="flex flex-row mt-28 gap-8 animate-slideUp [animation-delay:600ms] opacity-0">
+          <div className="flex flex-row py-28 gap-8 animate-slideUp [animation-delay:600ms] opacity-0">
             <a href="https://github.com/samjoshuadud/" 
                target="_blank" 
                className="group relative">
