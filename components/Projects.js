@@ -14,7 +14,7 @@ export const ProjectDetails = [
     techStack: ["React", "Next.js", "Firebase"],
     summary: `I developed a real-time chatting app with features including login, sign-up, Google authentication, and the ability to change display names. Users can join chat rooms using a unique ID. The app uses Firebase for the backend and real-time data handling, while the frontend is built with Next.js and hosted live on Vercel.`,
     link: "https://chatting-app-umak.vercel.app",
-    images: ["chatting-app-1.jpeg", "chatting-app-2.jpeg"],
+    images: ["chatting-app-5.jpeg", "chatting-app-2.jpeg", "chatting-app-3.jpeg", "chatting-app-4.jpeg", "chatting-app-1.jpeg"],
   },
   {
     title: "UniLostAndFound",
@@ -23,7 +23,7 @@ export const ProjectDetails = [
     summary:
       "I built a Lost and Found web application for university students and staff. It allows users to report lost or found items, send email notifications, and search for items based on categories. The backend is implemented in C# with ASP.NET, using Firebase Firestore for data storage. The frontend is built with Next.js, ensuring a seamless user experience.",
     link: "https://github.com/samjoshuadud/uni-lost-full-stack",
-    images: ["unilostandfound-1.jpeg", "unilostandfound-2.jpeg"],
+    images: ["unilostandfound-1.jpeg", "unilostandfound-2.jpeg", "unilostandfound-3.png", "unilostandfound-4.png"],
   },
   {
     title: "Face Attendance System",
@@ -84,7 +84,7 @@ export default function Project() {
   return (
     <>
       <motion.h1
-        className="text-5xl font-bold text-[#C3E5D2] pl-28 pt-8"
+        className="text-3xl lg:text-5xl font-bold text-[#C3E5D2] px-4 sm:px-8 md:px-16 lg:pl-28 pt-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -94,30 +94,31 @@ export default function Project() {
       <AnimatePresence mode="wait">
         {currentProjects.map((project, index) => (
           <motion.div
-            key={currentPage} // Key changes when page changes to trigger exit animation
-            className="flex justify-center mt-10"
-            initial={{ opacity: 0, y: 50 }}
+            key={currentPage}
+            className="flex justify-center mt-8 sm:pb-10 md:pb-10 lg:mt-10 px-6 sm:px-8 md:px-16 lg:px-0"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }} // Exit animation
-            transition={{ duration: 0.7, delay: 0.2 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
           >
-            <div className="w-[80%] grid grid-cols-2 gap-8">
+            <div className="w-full lg:w-[80%] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              {/* Project Info */}
               <motion.div
-                className="text-white mt-7"
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -50, opacity: 0 }} // Exit animation
-                transition={{ duration: 0.6 }}
+                className="text-white mt-4 lg:mt-10 order-2 lg:order-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <h1 className="text-4xl font-semibold text-[#C3E5D2]">
+                <h1 className="text-3xl lg:text-4xl font-semibold text-[#C3E5D2]">
                   {project.title}
                 </h1>
-                <p className="mt-6 mb-6 text-xl">{project.description}</p>
+                <p className="mt-4 lg:mt-6 mb-4 lg:mb-6 text-lg lg:text-xl">{project.description}</p>
 
-                <ul className="my-4 flex flex-row flex-wrap gap-4">
+                <ul className="my-4 flex flex-row flex-wrap gap-2 lg:gap-4">
                   {project.techStack.map((tech, index) => (
                     <Badge
-                      className="bg-[#258E57] px-4 py-2 text-sm"
+                      className="bg-[#258E57] px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm"
                       key={index}
                       as={motion.div}
                       initial={{ scale: 0.8, opacity: 0 }}
@@ -130,7 +131,7 @@ export default function Project() {
                   ))}
                 </ul>
 
-                <p className="my-6 text-lg  tracking-wide">
+                <p className="my-4 lg:my-6 text-base lg:text-lg tracking-wide">
                   {project.summary}
                 </p>
 
@@ -142,7 +143,7 @@ export default function Project() {
                 >
                   <Button
                     variant="outline"
-                    className="border-[#2EA566] flex gap-4 mt-10 px-4 py-7"
+                    className="border-[#2EA566] flex gap-4 mt-6 lg:mt-10 px-4 py-6 lg:py-7 w-full lg:w-auto"
                   >
                     <span className="text-[#2EA566]">View Project</span>
                     <SquareArrowOutUpRight
@@ -153,40 +154,43 @@ export default function Project() {
                 </motion.a>
               </motion.div>
 
+              {/* Project Images */}
               <motion.div
-                initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 50, opacity: 0 }}
-                transition={{ duration: 0.6 }}
+                className="order-1 lg:order-2 h-[calc(100vh-25rem)] overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#2EA566]/20 hover:scrollbar-thumb-[#2EA566]/40"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
               >
+                <div className="space-y-3 pr-2">
                 {project.images.map((image, index) => (
                   <motion.div
                     key={index}
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.8, opacity: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     <Image
                       src={`/assets/${image}`}
                       alt={`Project Image ${index + 1}`}
                       width={500}
                       height={250}
-                      className="h-64 w-full mb-2"
+                        className="w-full rounded-lg object-cover"
                     />
                   </motion.div>
                 ))}
+                </div>
               </motion.div>
             </div>
           </motion.div>
         ))}
       </AnimatePresence>
 
-      <div className="flex flex-col gap-4 fixed right-10 top-[47%] transform -translate-y-1/2">
+      {/* Navigation Buttons - Hidden on mobile */}
+      <div className="hidden lg:flex flex-col gap-4 absolute right-10 top-[47%] transform -translate-y-1/2">
         <motion.button
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))
-          }
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
           disabled={currentPage === totalPages - 1}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
@@ -210,23 +214,26 @@ export default function Project() {
         </motion.button>
       </div>
 
-      <div className="fixed bottom-40 left-1/2 transform -translate-x-1/2 flex justify-center text-[#C3E5D2]">
-        {Array.from({ length: totalPages }).map((_, index) => (
-          <motion.button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            className={`mx-1 p-1 outline-none focus:outline-none cursor-pointer`}
-          >
-            <Circle
-              size={10}
-              className={`${
-                index === currentPage ? "text-[#2EA566]" : "text-[#C3E5D2]/50 hover:text-[#C3E5D2]"
-              } transition-colors duration-200`}
-            />
-          </motion.button>
-        ))}
+      {/* Page Indicators - Adjusted for better stability */}
+      <div className="w-full pb-8 flex justify-center mt-4  mb-28 lg:mb-44">
+        <div className="flex items-center gap-2">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className={`mx-1 p-1 outline-none focus:outline-none cursor-pointer`}
+            >
+              <Circle
+                size={8}
+                className={`${
+                  index === currentPage ? "text-[#2EA566]" : "text-[#C3E5D2]/50 hover:text-[#C3E5D2]"
+                } transition-colors duration-200`}
+              />
+            </motion.button>
+          ))}
+        </div>
       </div>
     </>
   );
