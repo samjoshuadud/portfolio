@@ -25,6 +25,7 @@ module.exports = {
         fadeIn: 'fadeIn 0.8s ease-in forwards',
         slideUp: 'slideUp 0.8s ease-out forwards',
         gradient: 'gradient 6s ease infinite',
+        'achievement': 'achievement 0.3s ease-out',
       },
       backgroundSize: {
         '200%': '200%',

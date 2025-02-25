@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ProjectDetails = [
+export const ProjectDetails = [
   {
     title: "Chatting App",
     description: "A real-time chatting app",
