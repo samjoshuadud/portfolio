@@ -13,7 +13,7 @@ export default function About() {
                 About Me
               </h2>
               <p className="text-[#C3E5D2]/80 text-base lg:text-lg leading-relaxed">
-                I'm a 2nd year Computer Science student at the University of Makati, passionate about full-stack web development. 
+                Hi! I'm <span className="font-bold">Joshua Armojallas</span>. I'm a 2nd year Computer Science student at the University of Makati, passionate about full-stack web development. 
                 As a Linux enthusiast, I believe in the power of open-source technologies and their ability to shape the future of software development.
               </p>
             </div>
