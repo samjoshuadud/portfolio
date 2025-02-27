@@ -13,7 +13,7 @@ export default function Landing({setSection}) {
               alt="Profile"
               width={220}
               height={220}
-              className="rounded-full mt-14 animate-fadeIn relative group-hover:scale-105 transition duration-500"
+              className="rounded-full mt-12 animate-fadeIn relative group-hover:scale-105 transition duration-500"
             />
           </div>
 
@@ -41,7 +41,7 @@ export default function Landing({setSection}) {
             </button>
           </div>
 
-          <div className="flex flex-row mt-20 mb-20 gap-8 animate-slideUp [animation-delay:600ms] opacity-0">
+          <div className="flex flex-row mt-20 mb-16 gap-8 animate-slideUp [animation-delay:600ms] opacity-0">
             <a href="https://github.com/samjoshuadud/" 
                target="_blank" 
                className="group relative">
