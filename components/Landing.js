@@ -13,7 +13,7 @@ export default function Landing({setSection}) {
               alt="Profile"
               width={220}
               height={220}
-              className="rounded-full mt-16 animate-fadeIn relative group-hover:scale-105 transition duration-500"
+              className="rounded-full mt-14 animate-fadeIn relative group-hover:scale-105 transition duration-500"
             />
           </div>
 
