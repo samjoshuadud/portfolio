@@ -6,7 +6,6 @@ export default function Landing({setSection}) {
     <>
       <div className="flex justify-center items-center w-full px-4">
         <div className="flex flex-col items-center max-w-3xl w-full">
-          {/* Profile Image with subtle entrance and hover effects */}
           <div className="relative group opacity-0 animate-fadeInSlideUp">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#2EA566] to-[#C3E5D2] rounded-full blur opacity-0 group-hover:opacity-15 transition-opacity duration-800 ease-in-out"></div>
             <Image
@@ -19,20 +18,16 @@ export default function Landing({setSection}) {
             />
           </div>
 
-          {/* Title section with staggered fade in */}
           <div className="mt-8 text-[#C3E5D2] text-center opacity-0 animate-fadeInSlideUp [animation-delay:200ms]">
             <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-[#2EA566] to-[#C3E5D2] text-transparent bg-clip-text">
               Full Stack Developer
             </h1>
-            {/* Tagline with additional delay */}
             <p className="pt-4 text-xl sm:text-2xl opacity-0 animate-fadeInSlideUp [animation-delay:400ms]">
               Crafting digital solutions that make a difference.
             </p>
           </div>
           
-          {/* Button container with delayed entrance */}
           <div className="mt-10 sm:mt-12 opacity-0 animate-fadeInSlideUp [animation-delay:600ms] flex flex-col sm:flex-row items-center w-full px-4 sm:px-0 justify-center sm:space-x-6 space-y-4 sm:space-y-0">
-            {/* About button with smooth hover effect */}
             <button 
               onClick={() => setSection("about")} 
               className="bg-[#2EA566] rounded-lg w-full max-w-[220px] h-14 relative overflow-hidden group transition-all duration-300 ease-out hover:shadow-md hover:shadow-[#2EA566]/20"
@@ -42,7 +37,6 @@ export default function Landing({setSection}) {
                 Learn More About Me
               </span>
             </button>
-            {/* Projects button with complementary hover effect */}
             <button 
               onClick={() => setSection("projects")} 
               className="border border-[#2EA566] w-full max-w-[170px] h-14 rounded-lg relative overflow-hidden group transition-all duration-300 ease-out hover:shadow-md hover:shadow-[#2EA566]/20"
@@ -54,7 +48,6 @@ export default function Landing({setSection}) {
             </button>
           </div>
 
-          {/* Social links with delayed entrance */}
           <div className="flex flex-row mt-12 sm:mt-16 mb-12 sm:mb-16 gap-8 opacity-0 animate-fadeInSlideUp [animation-delay:800ms]">
             <a href="https://github.com/samjoshuadud/" 
                target="_blank" 

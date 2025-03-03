@@ -92,7 +92,6 @@ export default function Project() {
         Featured Projects
       </motion.h1>
       
-      {/* Mobile Navigation Buttons - Only visible on mobile */}
       <div className="flex justify-center mt-4 lg:hidden">
         <div className="flex items-center gap-6">
           <motion.button
@@ -157,7 +156,6 @@ export default function Project() {
             }}
           >
             <div className="w-full lg:w-[80%] grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8">
-              {/* Project Images - On top for mobile */}
               <motion.div
                 className="order-1 lg:order-2 h-[40vh] sm:h-[45vh] lg:h-[calc(100vh-25rem)] overflow-y-auto snap-y snap-mandatory scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#2EA566]/20 hover:scrollbar-thumb-[#2EA566]/40 rounded-lg"
                 initial={{ opacity: 0.3 }}
@@ -188,7 +186,6 @@ export default function Project() {
                 </div>
               </motion.div>
 
-              {/* Project Info */}
               <motion.div
                 className="text-white mt-4 sm:mt-6 lg:mt-10 order-2 lg:order-1"
                 initial={{ opacity: 0 }}
@@ -266,7 +263,6 @@ export default function Project() {
         ))}
       </AnimatePresence>
 
-      {/* Navigation Buttons - Hidden on mobile */}
       <div className="hidden lg:block fixed left-10 top-1/2 transform -translate-y-1/2 z-10">
         <motion.button
           onClick={goToPrevProject}
@@ -297,7 +293,6 @@ export default function Project() {
         </motion.button>
       </div>
 
-      {/* Page Indicators - Hidden on mobile, visible on larger screens */}
       <div className="w-full hidden lg:flex justify-center my-auto">
         <div className="flex items-center gap-2">
           {Array.from({ length: totalPages }).map((_, index) => (

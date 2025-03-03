@@ -2,7 +2,6 @@ import { Code2, Database, Cpu, Sparkles, Flame, Trophy, Star, Zap, Target, Arrow
 import { motion } from "framer-motion";
 
 export default function About() {
-    // Animation variants for staggered animations
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -23,9 +22,7 @@ export default function About() {
     <div className="flex justify-center">
       <div className="w-full h-[calc(100vh-10.5rem)] px-4 sm:px-6 md:px-10 lg:px-20 pt-4 sm:pt-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 h-full">
-          {/* Left Column - About & Skills */}
           <div className="space-y-6 lg:space-y-8 h-auto lg:h-[calc(100vh-10.5rem)] overflow-y-auto pb-4 lg:pb-0 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#2EA566]/20 hover:scrollbar-thumb-[#2EA566]/40 pr-2">
-            {/* Intro Section */}
             <motion.div 
               className="space-y-3 lg:space-y-6"
               initial={{ opacity: 0, y: -15 }}
@@ -51,7 +48,6 @@ export default function About() {
               </motion.p>
             </motion.div>
 
-            {/* Technical Skills Grid */}
             <motion.div 
               className="space-y-3 lg:space-y-6"
               variants={containerVariants}
@@ -74,7 +70,6 @@ export default function About() {
                 </motion.span>
               </motion.h3>
               
-              {/* Languages & Frameworks */}
               <motion.div 
                 className="p-3 sm:p-4 lg:p-6 rounded-xl border border-[#2EA566]/20 hover:border-[#2EA566]/40 transition-all duration-300 group bg-[#0D2818]/40"
                 variants={itemVariants}
@@ -123,7 +118,6 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Database */}
               <motion.div 
                 className="p-3 sm:p-4 lg:p-6 rounded-xl border border-[#2EA566]/20 hover:border-[#2EA566]/40 transition-all duration-300 group bg-[#0D2818]/40"
                 variants={itemVariants}
@@ -158,7 +152,6 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Right Column - Quest Log - Simplified for mobile */}
           <motion.div 
             className="h-auto lg:h-[96%] overflow-y-auto pr-1 sm:pr-2 lg:pr-4 pb-16 lg:pb-20 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#2EA566]/20 hover:scrollbar-thumb-[#2EA566]/40"
             initial={{ opacity: 0 }}
@@ -176,7 +169,6 @@ export default function About() {
               </motion.h3>
               
               <div className="relative space-y-5 sm:space-y-6 lg:space-y-8">
-                {/* Connection line - adjusted for mobile */}
                 <motion.div 
                   className="absolute left-[42px] sm:left-[48px] lg:left-[85px] top-8 bottom-20 w-0.5 bg-gradient-to-b from-[#2EA566] via-[#2EA566]/50 to-transparent"
                   initial={{ height: 0, opacity: 0 }}
@@ -184,7 +176,6 @@ export default function About() {
                   transition={{ duration: 1, delay: 0.5 }}
                 ></motion.div>
 
-                {/* Journey Cards - Optimized for mobile */}
                 {[
                   {
                     year: "2020",
