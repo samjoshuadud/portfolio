@@ -64,6 +64,38 @@ export const ProjectDetails = [
     summary: `A PHP E-Commerce website that enable users to create an order, shop, and request for a service. It is a printing service company.`,
     link: "https://github.com/samjoshuadud/Jedgeesmain",
     images: ["jedgeez.jpeg", "jedgeez2.jpeg"],
+  },
+  {
+    title: "Partyhwa",
+    description: "A collaborative manhwa reading platform",
+    techStack: ["Next.js", "FastAPI", "Python", "Real-time Sync"],
+    summary: `A collaborative manhwa reading platform where users can sync scrolling in real time with someone in the same room. Built with Next.js for the frontend and FastAPI (Python) for the backend.`,
+    link: "https://partyhwa.app/",
+    images: ["partyhwa.jpeg", "partyhwa2.jpeg", "partyhwa3.jpeg"],
+  },
+  {
+    title: "Automation-Notion",
+    description: "Moodle task automation script",
+    techStack: ["Python", "Web Scraping", "Notion API", "Todoist API"],
+    summary: `A Python automation script that scrapes tasks from our university Moodle and syncs them directly into Notion or Todoist, streamlining task management for students.`,
+    link: "https://github.com/samjoshuadud/automation-notion",
+    images: ["automation.jpeg"],
+  },
+  {
+    title: "Vehicle Tracker",
+    description: "Mobile vehicle maintenance tracker",
+    techStack: ["React Native", "Expo", "Python", "MariaDB"],
+    summary: `A React Native (Expo) mobile app that helps users log and track their vehicle maintenance records. Backend powered by Python with MariaDB for data storage.`,
+    link: "https://github.com/samjoshuadud/vehicle-react",
+    images: ["vehicle.jpeg", "vehicle2.jpeg", "vehicle3.jpeg", "vehicle4.jpeg", "vehicle5.jpeg"],
+  },
+  {
+    title: "Faculty Portal",
+    description: "CCIS Hackathon Winner - Faculty Management System",
+    techStack: ["Web Development", "Database Design", "System Architecture"],
+    summary: `A faculty management system prototype designed specifically for the College of Computer and Information Science (CCIS), UMAK. This project won 1st place at UMAK's 7th CCIS Hackathon.`,
+    link: "https://github.com/samjoshuadud/faculty-hackathon",
+    images: ["faculty.jpeg", "faculty2.jpeg", "faculty3.jpeg"],
   }
 ];
 
