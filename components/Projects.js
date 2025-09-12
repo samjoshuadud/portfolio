@@ -74,14 +74,6 @@ export const ProjectDetails = [
     images: ["partyhwa.jpeg", "partyhwa2.jpeg", "partyhwa3.jpeg"],
   },
   {
-    title: "Automation-Notion",
-    description: "Moodle task automation script",
-    techStack: ["Python", "Web Scraping", "Notion API", "Todoist API"],
-    summary: `A Python automation script that scrapes tasks from our university Moodle and syncs them directly into Notion or Todoist, streamlining task management for students.`,
-    link: "https://github.com/samjoshuadud/automation-notion",
-    images: ["automation.jpeg"],
-  },
-  {
     title: "Vehicle Tracker",
     description: "Mobile vehicle maintenance tracker",
     techStack: ["React Native", "Expo", "Python", "MariaDB"],
