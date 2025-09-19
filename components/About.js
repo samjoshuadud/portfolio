@@ -43,7 +43,7 @@ export default function About() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Hi! I'm <span className="font-bold text-[#C3E5D2]">Joshua Armojallas</span>. I'm a 2nd year Computer Science student at the University of Makati, passionate about full-stack web development. 
+                Hi! I'm <span className="font-bold text-[#C3E5D2]">Joshua Armojallas</span>. I'm a 3rd year Computer Science student at the University of Makati, passionate about full-stack web development. 
                 As a Linux enthusiast, I believe in the power of open-source technologies and their ability to shape the future of software development.
               </motion.p>
             </motion.div>
@@ -91,11 +91,13 @@ export default function About() {
                       { name: 'React', primary: true },
                       { name: 'Next.js', primary: true },
                       { name: 'JavaScript', primary: true },
+                      { name: 'TypeScript', primary: true },
                       { name: 'Java', primary: true},
                       { name: 'Python', primary: true },
                       { name: 'Node.js', primary: false },
                       { name: 'Tailwind', primary: false },
                       { name: 'C# ASP.NET', primary: false },
+                      { name: 'GoLang', primary: false },
                       { name: 'HTML/CSS', primary: false },
                     ].map((tech, index) => (
                       <motion.span 
@@ -134,7 +136,7 @@ export default function About() {
                   <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[#C3E5D2]">Database & Tools</h3>
                 </div>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {['MySQL', 'Firebase', 'Git', 'Linux'].map((tool, index) => (
+                  {['MySQL', 'Firebase', 'Git', 'Linux', 'Docker'].map((tool, index) => (
                     <motion.span 
                       key={index}
                       className="px-1.5 sm:px-2 lg:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm border border-[#2EA566]/20 text-[#C3E5D2]/60 hover:border-[#2EA566]/40 hover:text-[#C3E5D2] transition-all duration-300 cursor-pointer"
@@ -175,44 +177,45 @@ export default function About() {
                   animate={{ height: "100%", opacity: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
                 ></motion.div>
-
                 {[
-                  {
-                    year: "2020",
-                    title: "First Code",
-                    Icon: Star,
-                    description: "First tried programming with Python, learning basics by cloning and upgrading repositories.",
-                    achievement: "🐍 Python Basics"
-                  },
-                  {
-                    year: "2021",
-                    title: "Web Dev Start",
-                    Icon: Zap,
-                    description: "Bought a course on web development, learning HTML, CSS, JS, and Bootstrap.",
-                    achievement: "🌐 Web Basics"
-                  },
-                  {
-                    year: "2023",
-                    title: "CS Journey",
-                    Icon: Target,
-                    description: "Enrolled in Computer Science, learned Java and revisited web basics. Worked on projects featured in the Projects section.",
-                    achievement: "📚 CS Basics"
-                  },
-                  {
-                    year: "2024",
-                    title: "Hackathon Hero",
-                    Icon: Trophy,
-                    description: "Attended two hackathons, learning from mentors and building prototypes. Transitioned to Linux, enjoying customization.",
-                    achievements: ["🏆 Web3PH Hackathon", "🏆 CCIS Hackathon"],
-                    extraInfo: "These experiences taught me teamwork, rapid prototyping, and adapting to new challenges."
-                  },
-                  {
-                    year: "2025",
-                    title: "Current Quest",
-                    Icon: Flame,
-                    description: "Currently polishing skills and learning new technologies to enhance my development capabilities.",
-                    achievement: "🔧 Skill Polishing"
-                  }
+  {
+    year: "2020",
+    title: "First Code",
+    Icon: Star,
+    description: "First tried programming with Python, learning basics by cloning and upgrading repositories.",
+    achievement: "🐍 Python Basics"
+  },
+  {
+    year: "2021",
+    title: "Web Dev Start",
+    Icon: Zap,
+    description: "Bought a course on web development, learning HTML, CSS, JS, and Bootstrap.",
+    achievement: "🌐 Web Basics"
+  },
+  {
+    year: "2023",
+    title: "CS Journey",
+    Icon: Target,
+    description: "Enrolled in Computer Science, learned Java and revisited web basics. Worked on projects featured in the Projects section.",
+    achievement: "📚 CS Basics"
+  },
+  {
+    year: "2024",
+    title: "Hackathon Hero",
+    Icon: Trophy,
+    description: "Attended multiple hackathons, building prototypes and learning from mentors. Transitioned to Linux and embraced system customization.",
+    achievements: ["🏆 Web3PH Hackathon", "🏆 CCIS Hackathon", "🏆 7th CCIS UMak Hackathon Champion"],
+    extraInfo: "These experiences strengthened my teamwork, rapid prototyping, and adaptability to new challenges."
+  },
+  {
+    year: "2025",
+    title: "Current Quest",
+    Icon: Flame,
+    description: "Currently in 3rd year, grinding LeetCode problems, learning Golang, and polishing development skills to level up my tech stack.",
+    achievements: ["🔧 Skill Polishing", "💻 LeetCode: https://leetcode.com/u/samjoshuadud/"],
+    extraInfo: "Focusing on improving problem-solving skills, learning new languages, and preparing for future projects and internships."
+  }
+
                 ].map((journey, index) => (
                   <motion.div 
                     key={index} 
